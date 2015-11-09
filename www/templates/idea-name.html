@@ -1,0 +1,34 @@
+<ion-modal-view>
+	
+	<ion-header-bar class="bar-calm">		
+        <h1 class="title">Idea</h1>
+        
+        <button class="button icon-right button-clear" ng-click="OnClickIdeaNameDone()">
+        	<i class="icon" ng-class="modal_data.name.data.length>0 ? 'ion-checkmark':'ion-close'"></i>
+        </button>
+    </ion-header-bar>
+    
+    <ion-content has-bouncing="true" class="has-header white-bg" >
+
+        <div class="spacer" style="width: 300px; height: 25px; overflow: scroll;"></div>
+        
+        <div class="editor-single-wrapper">
+			<div class="left-italic-text">
+    	        <h3>
+        	        The Idea's Name
+            	</h3>
+        	</div>
+
+        	<textarea focus-me="modal_name_focus" msd-elastic="\n\n" ng-model="modal_data.name.data" maxlength="20" ng-enter="OnClickIdeaNameDone()" ng-keyup="onIdeaNameKeyUp()"></textarea> 
+        	
+        	<div class="line-horizontal"></div>       	
+        	<div class="character-remain">
+        		<h3>
+        			{{modal_data.name.character_remain}}
+        		</h3>
+        	</div>
+        </div>
+
+    </ion-content>
+    
+</ion-modal-view>

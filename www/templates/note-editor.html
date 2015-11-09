@@ -1,0 +1,44 @@
+<ion-modal-view>
+	
+	<ion-header-bar class="bar-calm">		
+        <button class="button icon-left button-clear" ng-click="OnClickCamera()">
+        	<i class="icon ion-camera"></i>
+        </button>
+        <h1 class="title">{{sub_item.title}}</h1>
+        
+        <button class="button icon-right button-clear" ng-click="OnClickSubCategoryDone()">
+        	<i class="icon ion-checkmark"></i>
+        </button>
+    </ion-header-bar>
+    
+    <ion-content has-bouncing="true" class="white-bg" >
+        
+        <div class="spacer" style="width: 300px; height: 25px; overflow: scroll;"></div>
+        
+        <div class="editor-multi-wrapper">
+			<div class="left-italic-text">
+    	        <h3>
+        	        {{sub_item.title}}
+            	</h3>
+        	</div>
+
+			<div class="list">
+				<div class="line" ng-repeat="line_item in sub_item.lines">
+					<i class="ion-ios7-arrow-forward"></i>
+					
+					<textarea focus-me="$index==(sub_item.lines.length-1) && shownModal" ng-if="line_item.type=='text'" msd-elastic="\n" ng-model="line_item.data" ng-enter="OnClickLineDone(line_item, $index)"></textarea>
+					
+					<img ng-show="line_item.type=='image'" ng-src="{{line_item.data}}" style="width: 250px; height: 230px">
+
+				</div>
+			
+			</div>
+ 	
+        	
+        </div>
+
+    </ion-content>
+    
+   
+    
+</ion-modal-view>

@@ -1,0 +1,406 @@
+/*****************************************************************************************
+*
+* Global CSS
+*
+*****************************************************************************************/
+
+.center-text {
+	text-align: center;
+}
+
+.center-image {
+	text-align: center;
+}
+
+.left-italic-text {
+	text-align: left;
+	font-style: italic;
+}
+
+.mesh-bg {
+	background-image: url('../img/page/background.png');
+	
+	background-repeat: repeat;
+    background-position: center center;
+}
+
+.white-bg {
+	background-color: #ffffff;
+}
+
+.bar-top-right {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) .bar-top-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 0px;
+}
+
+.elevatr-button {
+    width: 44px;
+    height: 44px;
+    
+    display: inline-block;
+    background-position: center center;
+    background-size: 100%;
+    
+    background-image: url('../img/page/newIdea-normal.png');
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .elevatr-button {
+	width: 64px;
+	height: 64px;
+	
+	display: inline-block;
+	background-position: center center;
+	background-size: 100%;
+	
+    background-image: url('../img/page/newIdea-normal.png');
+}
+
+.elevatr-button:active {
+	
+	background-image: url('../img/page/newIdea-highlighted.png');
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .elevatr-button:active {
+	
+	background-image: url('../img/page/newIdea-highlighted.png');
+}
+
+.button-height-wide {
+	height: 64px;
+	font-size: 18px;	
+}
+
+/* Accordion */
+.list .item.item-accordion {
+	line-height: 38px;
+  	padding-top: 0;
+  	padding-bottom: 0;
+  	transition: 0.09s all linear;
+}
+
+.list .item.item-accordion.ng-hide {
+  	line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  	display: block !important;
+}
+
+/*****************************************************************************************
+*
+* Home page
+*
+*****************************************************************************************/
+
+.home-footer {
+	text-align: center;
+}
+
+.home-footer .button {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.idea-list-content {
+}
+
+.idea-list-content .item h2 {
+    padding-left: 0px;
+}
+
+.idea-list-content .item p {
+    padding-left: 20px;
+}
+
+.idea-list-content .item img {
+    position: absolute;
+    top: 40px;
+    left: 16px;
+    
+    max-width: 14px;
+    max-height: 14px;
+    width: 100%;
+}
+
+.idea-list-content .item .delete-button {
+	position: absolute;
+	z-index: 30;
+	top: 15px;
+	right: 20px;
+	height: 30px;
+}
+
+/*****************************************************************************************
+*
+* Idea Title, Idea Name page
+*
+*****************************************************************************************/
+
+.editor-single-wrapper {
+	padding: 20px;
+}
+
+.editor-single-wrapper .left-italic-text h3 {
+	color: gray;
+	font-size: 20px;
+}
+
+.editor-single-wrapper textarea {
+	width: 100% ! important;
+	height: 150px ! important;
+	
+	font-size: 20px;
+	line-height: 24px;
+	resize: none !important;
+	border: none !important;
+}
+
+.editor-single-wrapper .line-horizontal {
+	width: 100%;
+	height: 20px;
+	
+	border-bottom: 1px solid grey;
+}
+
+.editor-single-wrapper .character-remain h3 {
+	text-align: center;
+	font-size: 20px;
+	color: gray;
+}
+
+/*****************************************************************************************
+*
+* Settings page
+*
+*****************************************************************************************/
+
+.bookandpencil {
+	height: 90px;
+}
+
+/*****************************************************************************************
+*
+* Account page
+*
+*****************************************************************************************/
+
+.account-tab-bar {
+	background-color: #fff;
+	border-bottom: 2px solid #cccccc;
+	width: 100%;
+	height: 64px;	
+}
+
+.account-tab {
+	width: 50%;
+
+	font-size: 22px;
+	font-weight: 900;
+	color: #bbb;
+	
+	padding-top: 20px;
+	text-align: center;	
+}
+
+.account-tab.selected {
+	background-color: #0e303c;
+	color: #fff;
+}
+
+.account-tab-pointer {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+
+	margin-top: -8px;
+	margin-left: -8px;
+	border-width: 0px 8px 8px;
+
+	border-color: transparent;
+	border-bottom-color: #fff;
+	border-style: solid;
+}
+
+.account-tab-pointer {
+	-webkit-transition: 0.2s linear all;
+	-moz-transition: 0.2s linear all;
+	-o-transition: 0.2s linear all;
+	transition: 0.2s linear all;
+}
+
+.account-input-field {
+	height: 64px;
+}
+
+.account-forgot-pwd {
+	text-align: center;	
+	color: #b3b2ae;
+}
+
+.account-forgot-pwd .button {
+	font-size: 22px;
+}
+
+/*****************************************************************************************
+*
+* Category page
+*
+*****************************************************************************************/
+
+.category-list-top-bar {
+	padding: 20px 10px;
+	text-align: right;
+}
+
+.category-list-content {
+}
+
+.category-list-content  .category-list-idea {
+	padding: 0px 20px 20px 20px;
+}
+
+.category-list-content .category-idea-name {
+	font-size: 26px;
+	font-weight: 900;
+	line-height: 26px;
+}
+
+.category-list-content .category-idea-date {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.category-list-content .item.pri-category {
+	padding-top: 20px;
+
+	border-top: 0;
+	border-bottom: 0;
+	height: 64px;
+}
+
+.category-list-content .item.pri-category h2 {
+	color: #ffffff;
+	font-size: 22px;
+}
+
+.category-list-content .item.pri-category i {
+	color: #ffffff;
+	font-size: 22px;
+}
+
+.category-list-content .item.sub-category {
+	padding-top: 20px;
+	background-color: #ffffff;
+}
+
+.category-list-content .item.sub-category h2 {
+	color: gray;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.category-list-content .item.sub-category i {
+	color: gray;
+	font-size: 16px;
+}
+
+.category-list-content .item.sub-category .line i {
+	color: gray;
+	font-size: 16px;
+	position: absolute;
+	padding-top: 6px;
+}
+
+.category-list-content .item.sub-category p {
+	color: #333333;
+	font-size: 16px;
+	
+	overflow: initial;
+	text-overflow: initial;
+	white-space: initial;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+}
+
+.category-list-content .item.sub-category img {
+	overflow: initial;
+	text-overflow: initial;
+	white-space: initial;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+}
+
+.editor-multi-wrapper {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.editor-multi-wrapper .left-italic-text h3 {
+	color: gray;
+	font-size: 16px;
+}
+
+.editor-multi-wrapper .line i {
+	color: gray;
+	font-size: 16px;
+	position: absolute;
+	padding-top: 0px;
+}
+
+.editor-multi-wrapper p {
+	color: #333333;
+	font-size: 16px;
+	
+	overflow: initial;
+	text-overflow: initial;
+	white-space: initial;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+}
+
+.editor-multi-wrapper textarea {
+	color: #333333;
+	font-size: 16px;
+	
+	padding-bottom: 10px;
+	padding-left: 15px;
+	resize: none !important;
+}
+
+.editor-multi-wrapper img {
+	padding-bottom: 10px;
+	padding-left: 15px;
+	resize: none !important;
+}
+
+
+
+.uncheckedClass {
+    position: absolute; 
+	right: 115px;  
+	border: none; 
+	background: transparent; 
+	padding-right: 77px;
+}
+ 
+.checkedClass {
+    position: absolute; 
+	left: 0px;  
+	border: none; 
+	background: transparent; 
+	padding-right: 77px;
+}

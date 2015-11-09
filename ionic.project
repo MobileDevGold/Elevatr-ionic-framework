@@ -1,0 +1,12 @@
+{
+  "name": "Elevatr",
+  "app_id": "com.elevatrapp.elevatr",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

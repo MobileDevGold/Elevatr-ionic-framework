@@ -1,0 +1,61 @@
+<ion-view title="Category" cache-view="false">
+
+    <ion-header-bar class="bar-calm">
+		<button class="button icon-left ion-ios7-arrow-back button-clear " ng-click="$ionicGoBack($event)">Back</button>        
+    </ion-header-bar>
+
+    <ion-content class="has-header mesh-bg category-list-content">
+        
+        <!-- top buttons -->
+        <div class="category-list-top-bar">
+			<div>
+				 <ion-toggle toggle-class="toggle-calm" ng-model="sharing.checked" ng-change="changeSharing()" class="checkedClass">
+				  Sharing
+				</ion-toggle>
+			</div>
+			
+        	<!-- Share button -->
+        	<button ng-show="sharing.checked == true" class="button button-outline button-light" ng-click="OnClickShare()">
+        		Share
+        	</button>
+			
+			<!-- Make Moves button -->
+        	<button class="button button-outline button-light" ng-click="OnClickMoves()">
+        		Make Moves
+        	</button>
+        
+        </div>
+        
+        <!-- Idea part -->
+        <div class="category-list-idea">
+        	<div class="category-idea-name" ng-click="OnClickIdeaName()">{{idea.title}}</div>
+        	<div class="category-idea-date">Created: Jan 31, 2015 | Edited: sec ago</div>
+        </div>
+        
+        <!-- Category list -->
+        <ion-list ng-repeat="category_item in categorylist">
+
+			<!-- main category -->
+			<ion-item  class="item-icon-right pri-category" ng-style="{'background-color': category_item.color}" ng-click="toggleCategory(category_item)" ng-class="{active: isCategoryShown(category_item)}">
+				<h2>{{category_item.title}}</h2>
+				<i class="icon" ng-class="isCategoryShown(category_item)? 'ion-minus':'ion-plus'"></i>
+			</ion-item>
+			
+			<!-- sub category -->
+			<ion-item class="item-icon-right sub-category" ng-repeat="sub_item in category_item.subcategory" ng-show="isCategoryShown(category_item)" ng-click="OnClickSubItem(sub_item)">
+				<h2 style="color: gray">{{sub_item.title}}</h2>
+				<i class="icon" ng-class="sub_item.lines.length>0 ? 'ion-compose':'ion-plus'"></i>
+					
+				<!-- line list -->
+				<div class="line" ng-repeat="line_item in sub_item.lines">
+					<i class="ion-ios7-arrow-forward"></i>
+					<p ng-if="line_item.type=='text'">{{line_item.data}}</p>
+					<img ng-if="line_item.type=='image'" data-ng-src="{{line_item.data}}" style="width: 250px; height: 230px">
+				</div>
+				
+			</ion-item>
+
+        </ion-list>
+		
+    </ion-content>
+</ion-view>

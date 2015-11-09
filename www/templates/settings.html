@@ -1,0 +1,55 @@
+<ion-view title="Settings">
+
+	<ion-header-bar class="bar-calm">
+		<button class="button icon-left ion-ios7-arrow-back button-clear " ng-click="$ionicGoBack($event)">Back</button>
+        <h1 class="title">Settings</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header mesh-bg">
+
+		<div style="padding: 20px">
+			<button class="button button-balanced button-block button-height-wide" ng-click="OnClickSignOutButton()">
+                Sign Out
+            </button>
+		</div>
+        <div ng-show="logged = true">
+        <div class="center-text">
+            <p>
+                Share, store, and backup your ideas secu..
+            </p>
+        </div>
+        
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+        
+        <div class="center-image">
+        	<img src="img/page/saveOnCloud.png" class="bookandpencil">
+        </div>
+        
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+		</div>
+        <div style="text-align:center">
+            <h5>Version &nbsp&nbsp&nbsp&nbsp{{$root.version}}</h5>
+        </div>
+        <ion-list>
+			<ion-item class="item-icon-right" ng-click="OnClickAbout()">
+				About
+				<i class="icon ion-ios7-arrow-forward"></i>				
+			</ion-item>
+
+            <ion-item class="item-icon-right" ng-click="OnClickPrivacyPolicy()">
+            	Privacy Policy
+            	<i class="icon ion-ios7-arrow-forward"></i>
+            </ion-item>
+            
+            <ion-item class="item-icon-right" ng-click="OnClickFeedBack()">
+            	Provide Feedback
+            	<i class="icon ion-ios7-arrow-forward"></i>
+            </ion-item>
+            
+            <ion-item class="item-icon-right" ng-click="OnClickStatus()">
+            	News, Notes, and Status
+            	<i class="icon ion-ios7-arrow-forward"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+<ion-view view-title="ELEVATR">
+	<ion-header-bar class="bar-calm">
+        <h1 class="title">ELEVATR</h1>
+        
+        <!-- ELEVATR mark button -->
+        <div class="bar-top-right">
+        	<a href="#" class="elevatr-button" ng-click="OnClickNewIdea()">   		
+        	</a>
+        </div>
+    </ion-header-bar>
+    
+	<ion-content class="has-header has-footer mesh-bg idea-list-content">
+	
+		<div ng-if="idea_list.length==0">
+			<!-- home screen banner -->
+			<div class="spacer" style="width: 300px; height: 100px;"></div>
+			<div class="center-image">
+				<img src="img/page/homeScreen_noIdea.png">
+			</div>
+		</div>
+		
+		<div ng-if="idea_list.length>0">
+			<ion-list>
+				<a  class="item item-image-icon" href="#" ng-click="OnClickItem($event, idea.id, deleteFlag)" ng-repeat="idea in idea_list" on-swipe-right="deleteFlag=true" on-swipe-left="delete=false" on-tap="deleteFlag=false">
+					<h2>{{idea.name}}</h2>
+					<img src="img/page/editingIcon.png">
+					<p>1m</p>
+					
+					<button class="button button-energized delete-button ng-hide" ng-show="deleteFlag" on-tap="OnDeleteItem($event, idea.id)">Delete</button>					
+				</a>
+			</ion-list>
+        </div>	      
+		
+	</ion-content>
+	
+	<!-- Account & Settings -->
+	<div class="bar bar-footer bar-clear home-footer" style="background-color: #ffffff;">
+		<div class="title">
+			<a class="button button-clear button-calm" href="#/settings">
+				Account & Settings
+				<span style="color: gray">
+				<i class="icon ion-gear-a"></i>
+				</span>
+			</a>			
+		</div>
+	</div>
+		
+</ion-view>

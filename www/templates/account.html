@@ -1,0 +1,46 @@
+<ion-view title="Account">
+
+	<ion-header-bar class="bar-calm">
+		<button class="button icon-left ion-ios7-arrow-back button-clear " ng-click="goWelcomePage()">Back</button>
+        <h1 class="title">Account</h1>
+    </ion-header-bar>
+    
+    <ion-content class="has-header mesh-bg" scroll="false">
+        
+		<!-- tab -->
+        <div class="button-bar account-tab-bar">
+        	<a class="account-tab selected" ng-class="{selected: selectedTab==0}" ng-click="onClickNew();">New Account</a>
+        	<a class="account-tab" ng-class="{selected: selectedTab==1}" ng-click="onClickSignIn();">Sign In</a>	
+        </div>
+
+		<!-- tab pointer triangle -->
+        <div class="account-tab-pointer" style="left: 25%" ng-style="{left: pointerPos}">
+        </div>
+        
+        <!-- form field -->
+        <div class="list list-inset">
+			<label class="item item-input account-input-field">
+				<span class="input-label">Email</span>
+				<input type="text" ng-model="user.email">
+			</label>
+
+            <label class="item item-input account-input-field">
+	            <span class="input-label">Password</span>
+				<input type="password" ng-model="user.password">
+			</label> 
+        </div>
+        
+        <!-- Create Account part -->
+        <div style="padding: 20px;">
+        	<button class="button button-balanced button-block button-height-wide" ng-click="OnClickAccountButton()">{{buttonTitle}}</button>
+        </div>
+        
+        <!-- Sign In part -->
+        <div class="account-forgot-pwd" ng-show="selectedTab==1">
+       		<button class="button button-clear button-stable" ng-click="OnClickForgotPasswordButton()">
+       			Forgot your Password ?
+       		</button>
+        </div>
+        
+    </ion-content>
+</ion-view>
